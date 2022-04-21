@@ -1,2 +1,0 @@
-# hackerrank
-challanges from hackerrank
