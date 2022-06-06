@@ -1,52 +1,17 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "name": "Untitled0.ipynb",
-      "provenance": [],
-      "authorship_tag": "ABX9TyPZ7PhKAf9uJ+k6L4dukI/t"
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "code",
-      "execution_count": 11,
-      "metadata": {
-        "id": "oy_P166W1zW6"
-      },
-      "outputs": [],
-      "source": [
-        ""
-      ]
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "def is_leap(year):\n",
-        "    leap = False\n",
-        "    \n",
-        "    if year%400==0:\n",
-        "      leap= True  \n",
-        "    elif  year%4==0:\n",
-        "      if year%100!=0:\n",
-        "        leap= True \n",
-        "    return leap\n",
-        "year=int(input())\n",
-        "print(is_leap(year))"
-      ],
-      "metadata": {
-        "id": "gbQ8sZdW10AA"
-      },
-      "execution_count": null,
-      "outputs": []
-    }
-  ]
-}
+#In the Gregorian calendar, three conditions are used to identify leap years:
+#The year can be evenly divided by 4, is a leap year, unless:
+#The year can be evenly divided by 100, it is NOT a leap year, unless:
+#The year is also evenly divisible by 400. Then it is a leap year.
+#Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False.
+#Note that the code stub provided reads from STDIN and passes arguments to the is_leap function. It is only necessary to complete the is_leap function.
+
+def is_leap(year):
+    leap = False
+    if year%400==0:
+      leap= True  
+    elif  year%4==0:
+      if year%100!=0:
+        leap= True 
+    return leap
+year=int(input())
+print(is_leap(year))
